@@ -1,0 +1,157 @@
+<!--
+HTML File for Assignment #4 - CIS 2286
+By Michael Coombs
+March 17th, 2022
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="trivProcess.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/starWarsFavicon.png" type="image/x-icon">
+    <title>Star Wars Trivia</title>
+</head>
+<body style="background-image: url(images/starWarsTrivBack.jpg)">
+
+<!--MAIN CONTAINER-->
+<div class="container">
+    <div class="row">
+        <!--TOP COLUMN FOR LOGO-->
+        <div class="col-sm-12">
+            <div class="imgStarWars">
+                <img src="images/starWarsFavicon.png" class="img-fluid" alt="Star Wars Logo">
+            </div>
+        </div>
+        <!--LEFT SIDE COLUMN-->
+        <div class="col-sm-6">
+            <form id="form">
+                <label>Question 1)</label>
+                <br>
+                <p> What year was Star Wars released?</p>
+                <p id="errorOne"></p>
+                <input id="questionOne" type="text">
+                <br>
+                <button type="button" id="questionOneHint" onclick="hintOne()"> HINT</button>
+                <br>
+                <br>
+                <br>
+                <label>Question 3)</label>
+                <br>
+                <p> Who created Star Wars?</p>
+                <p id="errorThree"></p>
+                <select id="questionThree">
+                    <option hidden>Choose One...</option>
+                    <option value="volvo">Quentin Tarantino</option>
+                    <option value="saab">Steven Spielberg</option>
+                    <option value="mercedes">George Lucas</option>
+                    <option value="audi">J.J. Abrams</option>
+                </select>
+                <br>
+                <button type="button" id="questionThreeHint" onclick="hintThree()"> HINT</button>
+                <br>
+                <br>
+                <br>
+                <label>Question 5)</label>
+                <br>
+                <p>Who built C-3P0?</p>
+                <p id="errorFive"></p>
+                <input id="questionFiveOptOne" type="radio" name="qFive" value="Opt1">
+                <label for="questionFiveOptOne">Obi-Wan Kenobi</label>
+                <br>
+                <input id="questionFiveOptTwo" type="radio" name="qFive" value="Opt2">
+                <label for="questionFiveOptTwo">Anakin Skywalker</label>
+                <br>
+                <input id="questionFiveOptThree" type="radio" name="qFive" value="Opt3">
+                <label for="questionFiveOptThree">Shmi Skywalker</label>
+                <br>
+                <input id="questionFiveOptFour" type="radio" name="qFive" value="Opt4">
+                <label for="questionFiveOptFour">Han Solo</label>
+                <br>
+                <button type="button" id="questionFiveHint" onclick="hintFive()"> HINT</button>
+                <br>
+                <br>
+                <label>Question 7)</label>
+                <br>
+                <p>Which Jedi survived Order 66?</p>
+                <p id="errorSeven"></p>
+                <input type="checkbox" id="questionSevenOptOne" name="q7" value="Opt1">
+                <label for="questionSevenOptOne">Obi-Wan Kenobi</label>
+                <br>
+                <input type="checkbox" id="questionSevenOptTwo" name="q7" value="Opt2">
+                <label for="questionSevenOptTwo">Mace Windu</label>
+                <br>
+                <input type="checkbox" id="questionSevenOptThree" name="q7" value="Opt3">
+                <label for="questionSevenOptThree">Yoda</label>
+                <br>
+                <input type="checkbox" id="questionSevenOptFour" name="q7" value="Opt4">
+                <label for="questionSevenOptFour">None of the above</label>
+                <br>
+                <button type="button" id="questionSevenHint" onclick="hintSeven()"> HINT</button>
+                <br>
+                <br>
+                <br>
+            </form>
+        </div>
+        <!--RIGHT SIDE COLUMN-->
+        <div class="col-sm-6">
+            <form>
+                <label>Question 2)</label>
+                <br>
+                <p>What is the weapon used by Jedi?</p>
+                <p id="errorTwo"></p>
+                <input id="questionTwo" type="text">
+                <br>
+                <button type="button" id="questionTwoHint" onclick="hintTwo()"> HINT</button>
+                <br>
+                <br>
+                <label>Question 4)</label>
+                <br>
+                <p>What planet is home to Chewbacca and the Wookiees?</p>
+                <p id="errorFour"></p>
+                <select id="questionFour">
+                    <option hidden>Choose One...</option>
+                    <option value="volvo">Tatooine</option>
+                    <option value="saab">Kashyyyk</option>
+                    <option value="mercedes">Coruscant</option>
+                    <option value="audi">Kamino</option>
+                </select>
+                <br>
+                <button type="button" id="questionFourHint" onclick="hintFour()"> HINT</button>
+                <br>
+                <br>
+                <label>Question 6)</label>
+                <br>
+                <p>What is the name of the Death Star’s original commander?</p>
+                <p id="errorSix"></p>
+                <input id="questionSixOptOne" type="radio" name="qSix" value="Opt1">
+                <label for="questionSixOptOne">Grand Admiral Thrawn</label>
+                <br>
+                <input id="questionSixOptTwo" type="radio" name="qSix" value="Opt2">
+                <label for="questionSixOptTwo">Grand Moff Tarkin</label>
+                <br>
+                <input id="questionSixOptThree" type="radio" name="qSix" value="Opt3">
+                <label for="questionSixOptThree">Director Krennic</label>
+                <br>
+                <input id="questionSixOptFour" type="radio" name="qSix" value="Opt4">
+                <label for="questionSixOptFour">Darth Vader</label>
+                <br>
+                <button type="button" id="questionSixHint" onclick="hintSix()"> HINT</button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h3 id="result" style=""><span id="display"></span></h3>
+            </form>
+        </div>
+        <!--BOTTOM COLUMN FOR BUTTONS-->
+        <div class="col-sm-12">
+            <button type="button" onclick="triviaFunction()" id="submit"> Submit</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

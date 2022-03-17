@@ -1,0 +1,89 @@
+/*
+* CSS File for Assignment #4 - CIS 2286
+* By Michael Coombs
+* March 17th, 2022
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+.container {
+    width: 800px;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid green;
+    color: whitesmoke;
+    border-radius: 25px;
+    background: linear-gradient(94deg, rgba(208, 214, 224, 0.6502976190476191) 23%, rgba(255, 255, 255, 0.65) 77%);
+}
+
+.imgStarWars {
+    margin-top: 25px;
+    max-width: 40%;
+    max-height: 40%;
+    margin-left: 225px;
+}
+
+body {
+    background-repeat: no-repeat;
+}
+
+form {
+    margin-top: 60px;
+    margin-left: 50px;
+    margin-bottom: 35px;
+}
+
+label {
+    color: black;
+    font-weight: bold;
+}
+
+p {
+    color: black;
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+button {
+    margin-top: 5px;
+    border-radius: 5px;
+    color: #fabb09;
+    font-weight: bold;
+    background-color: #961218;
+    border: 2px solid #fabb09;
+    font-family: 'Shippori Antique', sans-serif;
+}
+
+button:hover {
+    border-radius: 12px;
+    color: #c71e26;
+    font-weight: bold;
+    background-color: #fabb09;
+    border: 2px solid #c71e26;
+    transform: scale(-1, 1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+}
+
+#submit {
+    color: black;
+    background-color: whitesmoke;
+    border: none;
+    margin-left: 350px;
+    margin-bottom: 20px;
+}
+
+#submit:hover {
+    transform: none;
+    border-radius: 5px;
+    border: none;
+}
+
+#errorOne, #errorTwo, #errorThree, #errorFour, #errorFive, #errorSix, #errorSeven {
+    color: red;
+    font-family: 'Special Elite', cursive;
+}
+
